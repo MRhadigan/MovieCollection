@@ -1,0 +1,112 @@
+﻿@using MovieCollection.Models
+@model MovieCollection.Models.HomeModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+</head>
+    <div id="drawForm" class="text-center">
+        <h1>Relax & Enjoy</h1>
+        <table id="drawTemplate" class="text-center" style="border:1px solid lightgrey;border-collapse: collapse">
+            <tr>
+                <th style="border:1px solid lightgrey;border-collapse: collapse">
+                    Cover
+                </th>
+                <th style="border:1px solid lightgrey;border-collapse: collapse">
+                    Title
+                </th>
+                <th style="border:1px solid lightgrey;border-collapse: collapse">
+                    Genre
+                </th>
+                <th style="border: 1px solid lightgrey; border-collapse: collapse">
+                    Year Made
+                </th>
+                <th style="border:1px solid lightgrey;border-collapse: collapse">
+                    Director
+                </th>
+                <th style="border:1px solid lightgrey;border-collapse: collapse">
+                    Description
+                </th>
+            </tr>
+
+            @foreach (var movie in Model.Movies)
+            {
+                <tr>
+                    <td>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @movie.Id
+                    </th>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @movie.Title
+                    </th>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @movie.Genre
+                    </th>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @movie.YearMade
+                    </th>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @movie.Director
+                    </th>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @movie.Description
+                    </th>
+                    </td>
+                </tr>
+            }
+        </table>
+        <table id="drawTemplate" class="text-center" style="border:1px solid lightgrey;border-collapse: collapse">
+            <tr>
+                <th style="border:1px solid lightgrey;border-collapse: collapse">
+                    Cover
+                </th>
+                <th style="border:1px solid lightgrey;border-collapse: collapse">
+                    Title
+                </th>
+                <th style="border:1px solid lightgrey;border-collapse: collapse">
+                    Genre
+                </th>
+                <th style="border: 1px solid lightgrey; border-collapse: collapse">
+                    Years Made
+                </th>
+                <th style="border:1px solid lightgrey;border-collapse: collapse">
+                    Creator
+                </th>
+                <th style="border:1px solid lightgrey;border-collapse: collapse">
+                    Description
+                </th>
+            </tr>
+            @foreach (var showList in Model.Shows)
+            {
+                <tr>
+                    <td>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @showList.Id
+                    </th>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @showList.Title
+                    </th>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @showList.Genre
+                    </th>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @showList.YearsMade
+                    </th>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @showList.Creator
+                    </th>
+                    <th style="border:1px solid lightgrey;border-collapse: collapse">
+                        @showList.Description
+                    </th>
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+
